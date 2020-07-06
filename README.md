@@ -1,2 +1,2 @@
 # golang-learning
-`Gopher： Kevin T·MITNick`
+`Gopher： Kevin T·MiTNick`
