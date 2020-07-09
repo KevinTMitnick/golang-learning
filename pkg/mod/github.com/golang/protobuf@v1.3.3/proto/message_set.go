@@ -168,7 +168,7 @@ func unmarshalMessageSet(buf []byte, exts interface{}) error {
 			// so we join the new data correctly.
 			// We can assume that ext.enc is set because we are unmarshaling.
 			o := ext.enc[len(b):]   // skip wire type and field number
-			_, n := DecodeVarint(o) // calculate length of length varint
+			_, n := DecodeVarint(o) // Calculate length of length varint
 			o = o[n:]               // skip length varint
 			msg = append(o, msg...) // join old data and new data
 		}

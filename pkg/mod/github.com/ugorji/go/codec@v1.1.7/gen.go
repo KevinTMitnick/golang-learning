@@ -995,7 +995,7 @@ func (x *genRunner) encStruct(varname string, rtid uintptr, t reflect.Type) {
 	tisfi := ti.sfiSrc // always use sequence from file. decStruct expects same thing.
 
 	// var nn int
-	// due to omitEmpty, we need to calculate the
+	// due to omitEmpty, we need to Calculate the
 	// number of non-empty things we write out first.
 	// This is required as we need to pre-determine the size of the container,
 	// to support length-prefixing.
