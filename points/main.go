@@ -24,7 +24,7 @@ func main1()  {
 	fmt.Println("*p=", *p)
 }
 
-func main()  {
+func main2()  {
 	 var a int = 123
 
 	 fmt.Printf("a type is %T\n", a)
@@ -39,5 +39,17 @@ func main()  {
 
 	 fmt.Println(*aPointer)		// 取aPointer地址所存的值
 
+
+}
+
+func main()  {
+	// 定义指针，指向内存空间
+	var p *int		// nil 指向内存编号为 0x0空间 , 不允许用户进行读写操作的
+
+	//*p = 123		// 直接写数据，报错
+
+	p = new(int)	// new(数据类型)
+	*p = 123		// 写数据
+	fmt.Println(*p)
 
 }
