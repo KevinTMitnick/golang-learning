@@ -96,9 +96,10 @@ func main06()  {
 }
 
 
-// string 字符串 类型
 
-/*
+/*	string 字符串 类型
+
+额外学习： 字符串底层实现
 */
 func main()  {
 
