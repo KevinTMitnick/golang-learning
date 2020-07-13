@@ -10,7 +10,7 @@ func main0101() {
 	//	if i == 5 {
 	//		break
 	//	}
-	//	fmt.Println(i)
+	//	fmt.Println(i)		// 0 1 2 3 4 5
 	//}
 
 	for i := 0; i <= 10; i++ {
@@ -22,6 +22,8 @@ func main0101() {
 		}
 	}
 }
+
+
 func main0102() {
 	//continue 结束本次循环 继续下次循环
 	//计算1-100偶数的和
@@ -36,6 +38,7 @@ func main0102() {
 	fmt.Println(sum)
 }
 
+
 func main0103() {
 	//goto 无条件跳转语句
 	fmt.Println("性感法师")
@@ -45,6 +48,8 @@ FLAG:
 	goto FLAG
 	fmt.Println("日薪越亿")
 }
+
+
 func main() {
 	//goto 可不以跳入循环内部  不可以跳出函数
 HERE:

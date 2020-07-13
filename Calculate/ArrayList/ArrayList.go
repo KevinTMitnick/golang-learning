@@ -7,21 +7,21 @@ import (
 
 // 接口
 type List interface {
-	Size() int 		//数组大小
-	Get(index int) (interface{}, error)	// 抓取第几个元素
+	Size() int 									// 数组大小
+	Get(index int) (interface{}, error)			// 抓取第几个元素
 	Set(index int, newval interface{}) error	// 修改数据
-	Insert(index int, newval interface{}) error	//插入
-	Append(newval interface{}) 	// 追加
-	Clear()
-	Delete(index int) error
-	String() string	//返回字符串
+	Insert(index int, newval interface{}) error	// 插入
+	Append(newval interface{}) 					// 追加
+	Clear()										// 清空列表
+	Delete(index int) error						// 删除
+	String() string								// 返回字符串
 	Iterator() Iterator
 }
 
 // 数据结构: 字符串、整数、实数
 type ArrayList struct {
 	dataStore [] interface{}	// 数组存储
-	TheSize int		// 数组大小
+	TheSize int					// 数组大小
 }
 
 func NewArryList() *ArrayList  {
