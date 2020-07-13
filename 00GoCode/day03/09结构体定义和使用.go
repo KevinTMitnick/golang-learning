@@ -28,7 +28,10 @@ type Student struct {
 	age  int
 }
 
+
+// 对于map，如果value是struct{}类型的话，无法进行写操作(修改),但是可以进行读操作,如果想修改结构体  必须整体操作
 func main() {
+
 	m := make(map[int]Student)
 	s1 := Student{"兵哥", 18}
 	s2 := Student{"法师", 33}
