@@ -7,15 +7,22 @@ type people struct {
 }
 
 func main0501() {
+
+	// 结构类型数据
 	var i interface{} = &people{"木子"}
-	//类型断言
+
+
+	// 类型断言,显示接口数据
 	if v, ok := i.(*people); ok {
 		fmt.Println(v.Name)
 	} else {
 		fmt.Println("类型匹配失败")
 	}
 }
-func main() {
+
+
+
+func main0502() {
 	var i interface{} = people{"法师"}
 	switch i.(type) {
 	case people:

@@ -94,6 +94,6 @@ func main() {
 
 	//test:= struct {}{}
 
-	SayHi(&tea)
+	SayHi(&tea)		// 如果接收者不是指针类型， 可以使用  SayHi(tea)，不用取地址
 	SayHi(&stu)
 }
