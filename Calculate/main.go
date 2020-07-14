@@ -29,7 +29,7 @@ func main0()  {
 	list.Append(2)
 	list.Append(3)
 	list.Append("abc")
-	list.Append("谭建鑫")
+	list.Append("KT")
 	fmt.Println(list)
 	fmt.Println(list.TheSize)
 }
@@ -40,7 +40,7 @@ func main00()  {
 	list.Append(2)
 	list.Append(3)
 	list.Append("abc")
-	list.Append("谭建鑫")
+	list.Append("KT")
 	list.Insert(1,"x5")
 
 	fmt.Println(list)
@@ -58,7 +58,7 @@ func main5()  {
 	list.Append(2)
 	list.Append(3)
 	list.Append("abc")
-	list.Append("谭建鑫")
+	list.Append("KT")
 	list.Insert(1,"x5")
 
 	for it := list.Iterator(); it.HasNext(); {
