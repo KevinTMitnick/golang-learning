@@ -45,10 +45,15 @@ func main1001() {
 	1、无缓冲要求发送和接收必须同时准备好，才可以完成，属于同步操作，会发生阻塞
 	2、有缓冲，可以接收N个值 属于异步操作
 
+Channel中的两种接收方式:
+	i <- ch
+	i, ok <- ch
+
+
  */
 
 // 无缓冲chan案例
-func main()  {
+func main1002()  {
 	ch := make(chan int)
 	//fmt.Println(unsafe.Sizeof(ch))		//8
 
@@ -59,4 +64,25 @@ func main()  {
 
 	ch <- 1
 	time.Sleep(time.Second * 2)
+}
+
+// Close()函数关闭通道
+func main()  {
+	ch := make(chan int)
+
+	go func() {
+		for i:= 0; i<5; i++{
+			ch <- i
+		}
+		close(ch)
+	}()
+
+	for {
+		if data, ok := <- ch; ok{
+			fmt.Println(data)
+		}else {
+			break
+		}
+	}
+	fmt.Println("main结束")
 }

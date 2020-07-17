@@ -19,8 +19,10 @@ func Queuelenght(q *CricleQueue) int  {	//队列长度
 
 func EnQueue(q *CricleQueue, data interface{})  (err error){
 
+	return
 }
 
 func DeQueue(q *CricleQueue)  (data interface{},err error){
 
+	return
 }

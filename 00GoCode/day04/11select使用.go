@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func main1001() {
+func main1201() {
 	//指定CPU核数
 	//fmt.Println(runtime.GOMAXPROCS(0))
 	runtime.GOMAXPROCS(1)
