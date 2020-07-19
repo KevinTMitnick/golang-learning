@@ -37,7 +37,7 @@ func main1001() {
 
 单向chan:
 	接收：
-	ch ：= make(chan <- int)
+	ch ：= make(chan<- int)
 	发送：
 	ch1 := make(<-chan int)
 
@@ -50,15 +50,15 @@ Channel中的两种接收方式:
 	i, ok <- ch
 
 
- */
+*/
 
 // 无缓冲chan案例
-func main1002()  {
+func main1002() {
 	ch := make(chan int)
 	//fmt.Println(unsafe.Sizeof(ch))		//8
 
 	go func() {
-		value := <- ch
+		value := <-ch
 		fmt.Println(value)
 	}()
 
@@ -67,20 +67,20 @@ func main1002()  {
 }
 
 // Close()函数关闭通道
-func main()  {
+func main() {
 	ch := make(chan int)
 
 	go func() {
-		for i:= 0; i<5; i++{
+		for i := 0; i < 5; i++ {
 			ch <- i
 		}
 		close(ch)
 	}()
 
 	for {
-		if data, ok := <- ch; ok{
+		if data, ok := <-ch; ok {
 			fmt.Println(data)
-		}else {
+		} else {
 			break
 		}
 	}
