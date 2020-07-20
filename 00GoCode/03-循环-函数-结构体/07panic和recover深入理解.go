@@ -6,7 +6,7 @@ import (
 )
 
 // 案例1: 跨协程失效（ panic 只会触发当前 Goroutine 的延迟函数调用）
-func main()  {
+func main0702()  {
 	defer fmt.Println("From main()...")
 
 	go func() {
@@ -29,3 +29,29 @@ func main()  {
 	所以当程序发生崩溃时只会调用当前 Goroutine 的延迟调用函数，不会执行main函数的defer
  */
 
+// Example 02
+func a()  {
+	fmt.Println("Func a")
+}
+
+func b()  {
+	defer func() {
+		err := recover()
+		if err != nil {
+			fmt.Println("Func b error")
+		}
+	}()
+	panic("Panic in b")
+}
+
+func c()  {
+	fmt.Println("Func c")
+}
+
+
+func main()  {
+	a()
+	b()
+	c()
+
+}
