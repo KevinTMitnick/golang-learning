@@ -63,6 +63,8 @@ func main0903()  {
 func main()  {
 	slice := []int{9,4,3,5,6,8,0,1,2,7}
 
+	didSwap := false
+
 	// 外层控制行，表示执行次数
 	for i:=0; i < len(slice) - 1 ; i++{
 		// 内层控制列，表示比较次数
@@ -71,7 +73,12 @@ func main()  {
 				//if slice[j] < slice[j+1]{	// 降序
 				// 交换数据的值 = 多重赋值
 				slice[j], slice[j+1] = slice[j+1], slice[j]
+				didSwap = true
+				//fmt.Println(slice)
 			}
+		}
+		if !didSwap{
+			return
 		}
 	}
 	fmt.Println(slice)
