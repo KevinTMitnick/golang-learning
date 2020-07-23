@@ -22,6 +22,4 @@ func main()  {
 
 	fmt.Println(slice)	// [0 1 2 3 20 5 6 7 100 9]
 	fmt.Println(s2,len(s2),cap(s2))
-
-
 }
