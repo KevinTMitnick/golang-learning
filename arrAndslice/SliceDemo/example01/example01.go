@@ -6,6 +6,9 @@ import (
 
 func main()  {
 
+	ss := make([]int,0)
+	fmt.Println(ss)
+
 	slice := []int{0,1,2,3,4,5,6,7,8,9}
 	s1 := slice[2:5]
 	fmt.Println(s1,len(s1),cap(s1))		// [2 3 4] len=3 cap=8

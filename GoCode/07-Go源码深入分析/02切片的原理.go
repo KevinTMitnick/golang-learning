@@ -86,7 +86,7 @@ func main()  {
 
 	s1 := slice[2:5]
 	fmt.Println("S1:", s1, len(s1), cap(s1))		// [2 3 4] len=3 cap=8
-	fmt.Printf("%p\n", &s1)
+	//fmt.Printf("%p\n", &s1)
 
 
 	// 注意：	high 和 max 必须在老数组或者老 slice 的容量（cap）范围内，否则会导致panic
@@ -95,7 +95,7 @@ func main()  {
 
 	s2 := s1[2:6:7]					// 容量为 max - low ； 7 -2 = 5
 	fmt.Println("S2:", s2, len(s2), cap(s2))		// [4 5 6 7] len=4 cap=5
-	fmt.Printf("%p\n", &s2)
+	//fmt.Printf("%p\n", &s2)
 
 	//  第一步：修改s2， 影响 slice，s1,因为共用同一底层数组
 	s2 = append(s2, 100)
