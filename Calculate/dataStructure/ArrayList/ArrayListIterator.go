@@ -15,11 +15,11 @@ type Iterable interface {
 
 // 构造指针访问数组
 type ArrayListIterator struct {
-	list * ArrayList
+	list *ArrayList
 	currenindex int
 }
 
-func (list * ArrayList) Iterator() *ArrayListIterator {
+func (list *ArrayList) Iterator() *ArrayListIterator {
 	it := new(ArrayListIterator)
 	it.currenindex = 0
 	it.list = list

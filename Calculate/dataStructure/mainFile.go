@@ -1,8 +1,8 @@
 package main
 
 import (
-	"calculate/Queue"
-	"calculate/StackArray"
+	"calculate/dataStructure/Queue"
+	"calculate/dataStructure/StackArray"
 	"errors"
 	"fmt"
 	"io/ioutil"

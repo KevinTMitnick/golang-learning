@@ -1,7 +1,7 @@
 package main
 
 import (
-	"calculate/CricleQueue"
+	"calculate/dataStructure/CricleQueue"
 	"fmt"
 )
 

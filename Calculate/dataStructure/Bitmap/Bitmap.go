@@ -19,7 +19,7 @@ type bitmap struct {
 }
 
 //
-func NewBitmap(maxnum uint64) *bitmap  {
+func NewBitmap(maxnum uint64) *bitmap {
 	return &bitmap{make([]byte, (maxnum+7)/bitSize),0, maxnum}
 }
 

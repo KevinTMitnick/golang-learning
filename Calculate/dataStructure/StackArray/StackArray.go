@@ -15,7 +15,7 @@ type Stack struct {
 	currentsize int		// 当前大小
 }
 
-func NewStack() *Stack  {
+func NewStack() *Stack {
 	mystack := new(Stack)
 	mystack.dataSource = make([]interface{},0,1000)
 	mystack.capsize = 1000

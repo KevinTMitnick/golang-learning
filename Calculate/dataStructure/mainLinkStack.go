@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+// move to LinkStack and Build
+
 func main01() {
 	node1 := new(Node)
 	node2 := new(Node)
@@ -33,7 +35,7 @@ func main01() {
 func main() {
 	mystack := NewStack()
 
-	for i := 0; i < 1000; i++ {
+	for i := 0; i <= 20; i++ {
 		mystack.Push(i)
 	}
 

@@ -11,11 +11,11 @@ type StackArray interface {
 
 
 type Stack struct {
-	myarray * ArrayList
+	myarray *ArrayList
 	capsize int			// 最大范围
 }
 
-func NewArrayListStack() *Stack  {
+func NewArrayListStack() *Stack {
 	mystack := new(Stack)
 	mystack.myarray = NewArryList()
 	mystack.capsize = 10

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"calculate/ArrayList"
-	"calculate/Queue"
-	"calculate/StackArray"
+	"calculate/dataStructure/ArrayList"
+	"calculate/dataStructure/Queue"
+	"calculate/dataStructure/StackArray"
 	"fmt"
 )
 
@@ -20,18 +20,6 @@ func main()  {
 	fmt.Println(myq.DeQueue())
 	fmt.Println(myq.DeQueue())
 	fmt.Println(myq.DeQueue())
-}
-
-
-func main0()  {
-	list := ArrayList.NewArryList()
-	list.Append(1)
-	list.Append(2)
-	list.Append(3)
-	list.Append("abc")
-	list.Append("KT")
-	fmt.Println(list)
-	fmt.Println(list.TheSize)
 }
 
 func main00()  {

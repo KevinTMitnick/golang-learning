@@ -24,7 +24,7 @@ type ArrayList struct {
 	TheSize int					// 数组大小
 }
 
-func NewArryList() *ArrayList  {
+func NewArryList() *ArrayList {
 	list := new(ArrayList)
 	list.dataStore = make([]interface{},0, 10)
 	list.TheSize = 0
@@ -95,7 +95,7 @@ func (list *ArrayList) Clear() {
 	list.TheSize = 0
 }
 
-func (list *ArrayList)  Delete(index int) error {		//删除
+func (list *ArrayList)  Delete(index int) error { //删除
 	list.dataStore = append(list.dataStore[:index],list.dataStore[index+1:]...)		//重新叠加
 	list.TheSize--
 	return nil

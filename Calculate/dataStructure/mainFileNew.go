@@ -30,9 +30,9 @@ func GetAllX(path string, files []string, level int) ([]string, error) {
 
 	for _, fi := range read {	// 循环每个文件或者文件夹
 		if fi.IsDir(){	// 判断是否是文件夹
-			fullDir := path+"\\"+fi.Name()	//构造新的路径
-			files = append(files, levelstr+fullDir)	//追加路劲
-			files,_ = GetAllX(fullDir,files, level+1)	//文件夹递归
+			fullDir := path+"\\"+fi.Name()            //构造新的路径
+			files = append(files, levelstr+fullDir)   //追加路劲
+			files,_ = GetAllX(fullDir,files, level+1) //文件夹递归
 		}else {
 			fullDir := path+"\\"+fi.Name()	//构造新的路径
 			files = append(files, levelstr+fullDir)	//追加路劲
@@ -42,9 +42,9 @@ func GetAllX(path string, files []string, level int) ([]string, error) {
 }
 
 func main4()  {
-	path := "D:\\WorkDir"		// 路径
-	files := []string{}			// 数组字符串
-	files, _ = GetAllX(path, files,1)	// 抓取所有文件
+	path := "D:\\WorkDir"             // 路径
+	files := []string{}               // 数组字符串
+	files, _ = GetAllX(path, files,1) // 抓取所有文件
 
 	for i:= 0; i< len(files);i++{	//打印
 		fmt.Println(files[i])

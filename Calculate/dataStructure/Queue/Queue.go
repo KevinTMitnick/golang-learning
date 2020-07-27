@@ -16,7 +16,7 @@ type Queue struct {
 	theSize int					// 队列的大小
 }
 
-func NewQueue() *Queue  {
+func NewQueue() *Queue {
 	myqueue := new(Queue)
 	myqueue.dataStore = make([]interface{},0)
 	myqueue.theSize = 0
