@@ -54,6 +54,7 @@ https://www.cnblogs.com/unqiang/p/12052308.html
                     b. 标记此对象是否被gc标记过，也就是是否被GC垃圾回收机制回收；
 
         3）spans：
+            存储了指向 内存管理单元runtime.mspan的指针，每个内存管理单元会管理几个page的内存空间
             3.1 管理分配arena(即heap)的区域，表示arena区中的某一页(page)属于哪个 mspan；
             3.2 用于存放mspan的指针，每个指针指向 arena 的一个page；
 
